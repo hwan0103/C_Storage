@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int print_title_screen()
+{
+	printf("###############################\n");
+	printf("##                           ##\n");
+	printf("##         Dino Run          ##\n");
+	printf("##          V.0.1            ##\n");
+	printf("##                           ##\n");
+	printf("##  1. Start Game            ##\n");
+	printf("##  2. How to Play           ##\n");
+	printf("##  3. Exit                  ##\n");
+	printf("##                           ##\n");
+	printf("###############################\n");
+
+	return 0;
+}
+
+int print_how_to_play_screen()
+{
+	printf("###############################\n");
+	printf("##                           ##\n");
+	printf("##      To Avoid Enemy       ##\n");
+	printf("##                           ##\n");
+	printf("##  Press Space Bar To Jump  ##\n");
+	printf("##      Return to menu(y/n)  ##\n");
+        printf("###############################\n");
+
+	return 0;
+}
+
+int main()
+{
+	int num = 0;
+	int re = 0;
+	print_title_screen();
+	scanf("%d", &num);
+	/* 게임 루프
+	 * while문이 계속 반복해서 입력을 받는다.
+	 * 입력받은 값을 game_state에 저장한다.
+	 */
+	if (num == 1){
+		printf("This service is not yet available");
+		num = 0;
+	} else if (num == 2){
+		while (num) {
+			print_how_to_play_screen();
+			scanf("%d", &re);
+			if (re == 1) {
+				print_title_screen();
+				re = 0;
+				num = 2;
+			} else {
+				num = 0;
+			
+		}
+		return 0;		
+}
+	
